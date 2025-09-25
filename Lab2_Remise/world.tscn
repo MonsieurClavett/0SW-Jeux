@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ju4wnqefhbe3"]
+
+[ext_resource type="Script" uid="uid://dlyrfqtsv10f6" path="res://world.gd" id="1_hak15"]
+[ext_resource type="Texture2D" uid="uid://ninlq7vnxqi2" path="res://assets/space.jpg" id="2_fj7yv"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_hak15")
+enable_separation = true
+
+[node name="BG" type="TextureRect" parent="."]
+offset_right = 1601.0
+offset_bottom = 899.0
+scale = Vector2(0.80065185, 0.67635936)
+texture = ExtResource("2_fj7yv")

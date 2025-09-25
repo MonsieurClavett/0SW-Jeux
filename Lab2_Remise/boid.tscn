@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkvebeb3wfbv5"]
+
+[ext_resource type="Script" uid="uid://bdlyyugkfgoyr" path="res://boid.gd" id="1_ldbva"]
+[ext_resource type="Texture2D" uid="uid://bo42lc3c3aqce" path="res://assets/boid.png" id="2_d880j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwlh6"]
+size = Vector2(15, 16)
+
+[node name="Boid" type="Node2D"]
+script = ExtResource("1_ldbva")
+weight_separation = 3.0
+
+[node name="Image" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_d880j")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_rwlh6")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://djbhb11e8btrl"]
+
+[ext_resource type="Script" uid="uid://bvgef8oc4gifp" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://dkfohd47g1r8h" path="res://assets/oldARIES2.png" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(10.329342, 8.052883)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_4flbx")
+
+[node name="Image" type="Sprite2D" parent="."]
+scale = Vector2(0.19435333, 0.2855894)
+texture = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.4999981, -1.5)
+scale = Vector2(6.68, 8.320002)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(0, -28)
+rotation = 4.712389
